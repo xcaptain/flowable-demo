@@ -4,6 +4,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.ImportResource;
 
 @Configuration
-@ImportResource({"classpath*:flowable.cfg.xml"})
-public class FlowableConfig {
+@ImportResource({ "classpath*:flowable.cfg.xml" })
+public class FlowableConfiguration {
+    // load flowable config from resources/flowable.cfg.xml
 }
