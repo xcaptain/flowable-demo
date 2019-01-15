@@ -24,11 +24,11 @@ Because I have built flowable from source, so my database upgraded to `6.4.1.3`,
 get process definitions:
 
 ```sh
-curl -i --user flowfest-rest:test 'localhost:8080/latest-definitions/'
+curl -i --user flowfest-rest:test 'localhost:8088/latest-definitions/'
 ```
 
 get tasks:
 
 ```sh
-curl -i --user flowfest-rest:test 'localhost:8080/process-api/runtime/tasks/'
+curl -i --user flowfest-rest:test 'localhost:8088/process-api/runtime/tasks/'
 ```

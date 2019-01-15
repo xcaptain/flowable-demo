@@ -18,12 +18,12 @@ public class DefinitionsController {
     }
 
     @GetMapping("/latest-definitions")
-    public List latestDefinitions() {
+    public List<String> latestDefinitions() {
         return repositoryService.createProcessDefinitionQuery()
             .latestVersion()
             .list()
             .stream()
-            .map(ProcessDefinition::getKey)
+            .map(ProcessDefinition::getId)
             .collect(Collectors.toList());
     }
 

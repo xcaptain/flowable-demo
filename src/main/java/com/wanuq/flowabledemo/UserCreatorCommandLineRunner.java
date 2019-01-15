@@ -21,8 +21,8 @@ public class UserCreatorCommandLineRunner implements CommandLineRunner {
         createUserIfNotExists("flowfest-actuator");
         createUserIfNotExists("flowfest-rest");
 
-        if (idmIdentityService.createPrivilegeQuery().privilegeName("ROLE_REST").count() == 0) {
-            Privilege restPrivilege = idmIdentityService.createPrivilege("ROLE_REST");
+        if (idmIdentityService.createPrivilegeQuery().privilegeName("access-rest-api").count() == 0) {
+            Privilege restPrivilege = idmIdentityService.createPrivilege("access-rest-api");
             idmIdentityService.addUserPrivilegeMapping(restPrivilege.getId(), "flowfest-rest");
         }
 
