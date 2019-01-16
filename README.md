@@ -19,6 +19,8 @@ then run `select * from act_ge_property` to see if flowable version is not corre
 
 Because I have built flowable from source, so my database upgraded to `6.4.1.3`, to fix this error, just change `flowable-spring-boot-starter-rest` version to `6.4.1-SNAPSHOT`
 
+Don't know why `flowable.cfg.xml` can't atomatically registered, so I wrote a `EventRegisterCommandLineRunner` to register event listener at app startup.
+
 ## test
 
 get process definitions:
