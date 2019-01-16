@@ -34,3 +34,17 @@ get tasks:
 ```sh
 curl -i --user flowfest-rest:test 'localhost:8088/process-api/runtime/tasks/'
 ```
+
+## using docker
+
+build
+
+```sh
+docker build -t xcaptain/flowable-demo .
+```
+
+run
+
+```sh
+docker run --rm -p 8088:8088 -e SPRING_DATASOURCE_DRIVER-CLASS-NAME=org.postgresql.Driver -e SPRING_DATASOURCE_URL=jdbc:postgresql://192.168.1.1:5432/flowable -e SPRING_DATASOURCE_USERNAME=flowable -e SPRING_DATASOURCE_PASSWORD=flowable --name flowable-demo xcaptain/flowable-demo:latest
+```
